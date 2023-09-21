@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="csv_to_json.js"></script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+
+		const blogURLs = [];
+
+		const cleanedData = {}
+
+		blogs.forEach(blog => {
+
+			blogURLs.push(blog["Permalink"])
+
+			cleanedData[blog.Permalink] = {
+
+				"title": blog.Title,
+				"images": blog["Image URL"].split("|"),
+				"is_published": true,
+				"imageNames": blog["Image Filename"].split("|"),
+				"author": blog["Author Username"],
+				"thumbnail_path": blog["Image Featured"],
+				"published_date": blog["Date"]
+
+			}
+
+		})
+
+		console.log("cleanded data: ", cleanedData)
+
+		console.log("blogURLs: ", blogURLs)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	</title>
+
+	<script type="text/javascript" src="cleanedData.js"></script>
+	<script type="text/javascript" src="body.js"></script>
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+	
+	let allImageURLs = []
+
+	for(var key in cleanedData){
+
+	
+		cleanedData[key]["body"] = body[key]["body"]
+		cleanedData[key]["meta_description"] = body[key]["meta_description"]
+
+		allImageURLs = [...allImageURLs, ...cleanedData[key]["images"]]
+	
+	}
+
+
+
+	console.log("merged data: ", cleanedData);
+
+
+
+	console.log("all image urls: ", allImageURLs);
+
+
+
+</script>
+
+</body>
+</html>

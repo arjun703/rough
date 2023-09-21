@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist>
+  <dict>
+    <key>Protocol</key>
+    <string>davs</string>
+    <key>Hostname</key>
+    <string>store-mmjswuj1to.mybigcommerce.com</string>
+    <key>Port</key>
+    <string>443</string>
+    <key>Username</key>
+    <string>support@cartmade.com</string>
+    <key>Path</key>
+    <string>/dav</string>
+  </dict>
+</plist>
+
