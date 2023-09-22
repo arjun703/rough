@@ -45,6 +45,8 @@ async function fetchAndExtractMetaInfo(pageURL) {
 
     // Loop through all nodes of postContent and remove the style attribute
     if (postContent) {
+
+
       const allElementsWithStyle = postContent.querySelectorAll('[style]');
       allElementsWithStyle.forEach((element) => {
         element.removeAttribute('style');
@@ -56,7 +58,16 @@ async function fetchAndExtractMetaInfo(pageURL) {
         styleTag.remove();
       });
 
-      
+      // Loop through all img elements inside postContent and remove srcset attribute
+      const imgElements = postContent.querySelectorAll('img');
+      imgElements.forEach((imgElement) => {
+        imgElement.removeAttribute('srcset');
+      });
+
+      const h1 = postContent.querySelector('h1')
+      if(h1)
+        h1.remove()
+
     }
 
     const metaDescription = metaDescriptionElement ? metaDescriptionElement.getAttribute('content') : '';
